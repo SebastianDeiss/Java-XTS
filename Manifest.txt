@@ -1,4 +1,4 @@
 Main-Class: sdeiss.crypto.block.mode.xts.Main
 Name: Java XTS mode
-Specification-Title: An XTS mode implementation for Java(TM).
+Specification-Title: XTS mode implementation for Java(TM).
 Implementation-Title: sdeiss.crypto.block.mode.xts
