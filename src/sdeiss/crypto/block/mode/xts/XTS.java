@@ -31,11 +31,12 @@ import org.bouncycastle.crypto.BlockCipher;
 
 /**
  * XTS mode implementation.
- * XTS stands for XOR Encrypt XOR Tweakable Block Cipher with Ciphertext Stealing.
+ *
+ * XTS stands for XEX with tweak and ciphertext stealing.
+ * XTS is defined in the IEEE P1619(TM)/D16 Standard for Cryptographic Protection of Data on
+ * Block-Oriented Storage Devices.
  * 
  * @author Sebastian Deiss
- * @see IEEE P1619(TM)/D16 Standard for Cryptographic Protection of Data on
- * Block-Oriented Storage Devices
  *
  */
 public final class XTS
@@ -184,9 +185,7 @@ public final class XTS
 	{
 		long whiteningLo = ByteUtil.loadInt64LE(tweak, 0);
 		long whiteningHi = ByteUtil.loadInt64LE(tweak, SIZE_OF_LONG);
-		
-		// Multiplication of two polynomials over the binary field
-		// GF(2) modulo x^128 + x^7 + x^2 + x + 1, where GF stands for Galois Field.
+
 		int finalCarry = 0 == (whiteningHi & 0x8000000000000000L) ? 0 : 135;
 		
 		whiteningHi <<= 1;
