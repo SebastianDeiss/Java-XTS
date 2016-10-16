@@ -2,4 +2,6 @@
 /docs
 /.classpath
 /.project
+/.idea
+*.iml
 *.jar
