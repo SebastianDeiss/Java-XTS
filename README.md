@@ -18,4 +18,4 @@ For details see [License.txt](./License.txt).
 
 
 ## Dependencies ##
-None. It includes the required parts of Bouncy Castle.
+None. It includes the required parts of [Bouncy Castle](https://bouncycastle.org/java.html).
