@@ -96,7 +96,7 @@ public final class XTS
 		for (int i = 0; i < XTS_DATA_UNIT_SIZE; i += BLOCK_SIZE)
 		{
 			// Encrypt / decrypt one block
-			this.processBlock(in, i, out, i, tweak);
+			this.processBlock(in, inOffset + i, out, outOffset + i, tweak);
 			// Multiply tweak by alpha
 			tweak = this.multiplyTweakByA(tweak);
 		}
