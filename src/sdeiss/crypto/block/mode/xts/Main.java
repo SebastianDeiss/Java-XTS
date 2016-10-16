@@ -142,7 +142,7 @@ public final class Main
         System.out.println("XTS mode implementation for Java");
         System.out.println("specified in IEEE P1619(TM)/D16 Standard for");
         System.out.println("Cryptographic Protection of Data on Block-Oriented Storage Devices");
-        System.out.println("Copyright (C) 2015 Sebastian Deiss. All rights reserved.");
+        System.out.println("Copyright (C) 2015-2016 Sebastian Deiss. All rights reserved.");
         System.out.println("");
     }
 }
